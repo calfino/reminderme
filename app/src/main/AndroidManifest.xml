@@ -4,9 +4,12 @@
     package="com.example.reminderme">
 
     <dist:module dist:instant="true" />
-
+    <uses-feature android:name="android.hardware.bluetooth"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
 
     <application
         android:allowBackup="true"
@@ -15,8 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListActivity"></activity>
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".scanDevice"/>
+        <activity android:name=".DeviceActivity" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".HomeActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">

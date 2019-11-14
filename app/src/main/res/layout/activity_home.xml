@@ -44,31 +44,29 @@
         android:text="Turn Off"
         android:minWidth="200dp" />
     <Button
-        android:id="@+id/discoverableDevices"
+        android:id="@+id/deviceLists"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginBottom="8dp"
         android:minWidth="200dp"
-        android:text="Discoverable" />
+        android:text="Device Lists" />
     <Button
         android:id="@+id/pairedDevices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_marginBottom="8dp"
         android:text="Get Paired Devices"
         android:minWidth="200dp"/>
     <Button
+
         android:id="@+id/scanDevices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="scanDevicesOnClick"
         android:text="Scan Devices"
         android:minWidth="200dp"/>
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/lvNewDevices"/>
+
 
 
 
