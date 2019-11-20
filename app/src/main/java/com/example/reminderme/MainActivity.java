@@ -11,6 +11,7 @@ private Handler handler1;
 private Runnable runnable1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         runnable1 = new Runnable() {
@@ -24,6 +25,8 @@ private Runnable runnable1;
 
         handler1.postDelayed(runnable1, 2000);
     }
+
+
 
 //    @Override
 //    protected void onDestroy() {

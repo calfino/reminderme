@@ -14,11 +14,22 @@
         android:text=""
         android:textSize="20sp"
         />
+
+    <Button
+        android:id="@+id/btnStartConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pairedDevicesView"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:text="Start Connection" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listDevices"
-        android:layout_marginTop="32dp"
+        android:layout_below="@+id/btnStartConnection"
         />
+
 
 </RelativeLayout>
