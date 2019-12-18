@@ -117,11 +117,10 @@ public class scanDevice extends AppCompatActivity {
                                 BTDevices.add(device);
                                 Log.i("isi dari BTDevices: ",  BTDevices.toString());
                                 v.vibrate(VibrationEffect.createOneShot(2500, VibrationEffect.DEFAULT_AMPLITUDE));
-
-//                                Intent intents = new Intent(scanDevice.this, scanDevice.class);
-//                                intents.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                                startActivity(intents);
-//                                finish();
+                                Intent intents = new Intent(scanDevice.this, HomeActivity.class);
+                                intents.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intents);
+                                finish();
                             } else {
                                 BTDevices.add(device);
                                 Log.i("isi dari BTDevices: ",  BTDevices.toString());

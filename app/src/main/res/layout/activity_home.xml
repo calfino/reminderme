@@ -4,56 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/gray"
     tools:context=".HomeActivity">
 
     <TextView
         android:id="@+id/statusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="20sp"
-        />
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="monospace"
+        android:text="Bluetooth is Available"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:layout_height="200dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
-        />
-
-    <Button
-        android:id="@+id/turnOn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-
-        android:text="Turn On"
-        android:minWidth="200dp"/>
-
-    <Button
-        android:id="@+id/turnOff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="8dp"
-        android:text="Turn Off"
-        android:minWidth="200dp" />
-
+        android:layout_marginBottom="50dp" />
     <Button
 
         android:id="@+id/scanDevices"
         android:layout_width="47dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
         android:background="#ffffff"
         android:drawableLeft="@drawable/scan_devices"
         android:minWidth="200dp"
         android:onClick="scanDevicesOnClick" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center">
+
+
+
+        <Button
+            android:id="@+id/turnOff"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:background="#ff0000"
+            android:fontFamily="serif-monospace"
+            android:minWidth="200dp"
+            android:layout_marginRight="50dp"
+            android:text="OFF"
+            android:drawableLeft="@drawable/bluetooth_off"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/turnOn"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="8dp"
+            android:background="#00ff00"
+            android:fontFamily="serif-monospace"
+            android:minWidth="200dp"
+            android:text="ON"
+            android:drawableLeft="@drawable/bluetooth_on"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
 
 
 </LinearLayout>
