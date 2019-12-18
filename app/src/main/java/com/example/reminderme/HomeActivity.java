@@ -46,8 +46,8 @@ public class HomeActivity extends AppCompatActivity {
         statusTextView = findViewById(R.id.statusTextView);
         turnOffBtn = findViewById(R.id.turnOff);
         turnOnBtn = findViewById(R.id.turnOn);
-        getDeviceListsBtn = findViewById(R.id.deviceLists);
-        getPairedBtn = findViewById(R.id.pairedDevices);
+//        getDeviceListsBtn = findViewById(R.id.deviceLists);
+//        getPairedBtn = findViewById(R.id.pairedDevices);
         pairedDevicesView = findViewById(R.id.pairedDevicesView);
         imageView = findViewById(R.id.imageView);
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -94,24 +94,23 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        getDeviceListsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!bluetoothAdapter.isDiscovering()) {
-                    Intent intent = new Intent(getApplicationContext(), DeviceActivity.class);
-                    startActivity(intent);
-                }
-            }
-        });
+//        getDeviceListsBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (!bluetoothAdapter.isDiscovering()) {
+//                    Intent intent = new Intent(getApplicationContext(), DeviceActivity.class);
+//                    startActivity(intent);
+//                }
+//            }
+//        });
 
-        getPairedBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ListActivity.class);
-                startActivity(intent);
-//
-            }
-        });
+//        getPairedBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(HomeActivity.this, ListActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
     }

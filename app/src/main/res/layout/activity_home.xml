@@ -43,31 +43,17 @@
         android:layout_marginBottom="8dp"
         android:text="Turn Off"
         android:minWidth="200dp" />
-    <Button
-        android:id="@+id/deviceLists"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:layout_marginBottom="8dp"
-        android:minWidth="200dp"
-        android:text="Device Lists" />
-    <Button
-        android:id="@+id/pairedDevices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Get Paired Devices"
-        android:minWidth="200dp"/>
     <Button
 
         android:id="@+id/scanDevices"
-        android:layout_width="wrap_content"
+        android:layout_width="47dp"
         android:layout_height="wrap_content"
-        android:onClick="scanDevicesOnClick"
-        android:text="Scan Devices"
-        android:minWidth="200dp"/>
-
-
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/scan_devices"
+        android:minWidth="200dp"
+        android:onClick="scanDevicesOnClick" />
 
 
 </LinearLayout>
