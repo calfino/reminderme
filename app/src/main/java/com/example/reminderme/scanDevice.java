@@ -31,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 
 public class scanDevice extends AppCompatActivity {
 
-
+    final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
     private static final String TAG = "scandevice";
     BluetoothAdapter bluetoothAdapter;
     public List<BluetoothDevice> BTDevices;
@@ -117,6 +117,7 @@ public class scanDevice extends AppCompatActivity {
                                 BTDevices.add(device);
                                 Log.i("isi dari BTDevices: ",  BTDevices.toString());
                                 v.vibrate(VibrationEffect.createOneShot(2500, VibrationEffect.DEFAULT_AMPLITUDE));
+
 //                                Intent intents = new Intent(scanDevice.this, scanDevice.class);
 //                                intents.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //                                startActivity(intents);
@@ -180,7 +181,7 @@ public class scanDevice extends AppCompatActivity {
         BTDevices = new ArrayList<>();
         lvNewDevices = (ListView) findViewById(R.id.lvNewDevices);
         showToast("Scanning for devices");
-        final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
+
         executorService.scheduleAtFixedRate(new Runnable() {
             @Override
             public void run() {
@@ -259,6 +260,7 @@ public class scanDevice extends AppCompatActivity {
     protected void onDestroy() {
         Log.v("scanDevice", "onDestroy");
         unregisterReceiver(BroadcastReceiver1);
+        executorService.shutdown();
 //        unregisterReceiver(BroadcastReceiver2);
 //        unregisterReceiver(mReceiver);
         super.onDestroy();
